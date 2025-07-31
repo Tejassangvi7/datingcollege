@@ -140,7 +140,7 @@ export default function RegistrationForm({ email }) {
     }
     setIsSubmitting(true);
     try {
-      const response = await axios.post("https://collegedating-1.onrender.com/api/v1/profile/createProfile", formData);
+      const response = await axios.post("https://collegedating-cbii.onrender.com/api/v1/profile/createProfile", formData);
       if (response.status === 200 || response.status === 201) {
         toast.success("🎉 Registration successful! Redirecting...");
         setFormData({ name: "", email: "", password: "", age: "", gender: "", year: "", interests: [], profile: "" });
