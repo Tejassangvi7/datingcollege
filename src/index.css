@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === BASE STYLE (Applies by default) === */
+@layer base {
+  body {
+    @apply relative font-sans h-screen overflow-hidden;
+    font-family: 'Inter', sans-serif; /* fallback */
+  }
+
+  html.theme-dark-glass body {
+    @apply bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white;
+  }
+
+  html.theme-light body {
+    @apply bg-white text-black;
+  }
+
+  html.theme-romantic body {
+    @apply bg-romantic-50 text-romantic-900;
+  }
+}
+
+/* === Root Styling === */
+body, html, #root {
+  background: rgb(18, 18, 18) !important;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* === Transparent Scrollbar (Global) === */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+  border: none;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* === Smooth Scrolling for all scrollable elements === */
+* {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
