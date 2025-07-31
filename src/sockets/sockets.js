@@ -10,14 +10,14 @@ export const connectSocket = () => {
   if (!UserID) return;
 
   if (!socket) {
-    socket = io("https://collegedating-6.onrender.com", {
+    socket = io("https://collegedating-1.onrender.com", {
       query: { UserID },
       transports: ["websocket"],
       autoConnect: true, // or remove this line entirely (default is true)
     });
 
     socket.on("connect", () => {
-      console.log("✅ Socket connected:", socket.id);
+      console.log("✅ Socket connected:");
     });
 
     socket.on("disconnect", () => {

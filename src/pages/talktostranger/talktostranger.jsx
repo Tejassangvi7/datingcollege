@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/api";
+const UserID = localStorage.getItem("UserID")
+
 import LoadingSpinner from '../../components/LoadingComponent';
 const RandomMatchPage = () => {
 const navigate =useNavigate();
@@ -64,8 +66,29 @@ useEffect(() => {
     }
   };
 
-  const handleMessage = () => {
-    // Handle messaging logic here
+  const handleMessage = async () => {
+    const newMessage = {
+      senderId: UserID,
+      receiverId: match._id,
+      text: "It's a match",
+      createdAt: new Date().toISOString(),
+    };
+  
+    try {
+      const res = await api.post("/api/v1/message/create", newMessage);
+      
+      if (res.status === 201) {
+        console.log("check");
+        
+        navigate("/messages"); // Adjust route if needed
+        
+      } else {
+        console.error("Failed to save message to server:", res.data);
+      }
+  
+    } catch (error) {
+      console.error("Error while sending message:", error);
+    }
   };
 
   const LoadingCard = () => (

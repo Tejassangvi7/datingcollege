@@ -32,7 +32,7 @@ const EmailVerification = () => {
 
     try {
       const response = await axios.post(
-        "https://collegedating-6.onrender.com/api/v1/auth/send-otp-1st",
+        "https://collegedating.onrender.com/api/v1/auth/send-otp-1st",
         { email }
       );
       if (response.status === 200) {
@@ -59,7 +59,7 @@ const EmailVerification = () => {
 
     try {
       const response = await axios.post(
-        "http://192.168.101.4:5000/api/v1/auth/verify-otp-1st",
+        "https://collegedating-1.onrender.com/api/v1/auth/verify-otp-1st",
         { email, otp }
       );
       if (response.status === 200) {

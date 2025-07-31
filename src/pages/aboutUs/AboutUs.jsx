@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Instagram, AlertTriangle, HelpCircle } from "lucide-react";
+import { Instagram, AlertTriangle, HelpCircle, MailQuestion } from "lucide-react";
 
 const AboutUs = () => {
   return (
@@ -43,16 +43,24 @@ const AboutUs = () => {
           </p>
         </div>
 
+        {/* 💬 DM for Queries or Source Code */}
+        <div className="bg-blue-400/10 border border-blue-500 rounded-xl p-4 text-blue-300 flex items-center gap-3">
+          <MailQuestion className="w-6 h-6" />
+          <p className="text-sm text-left">
+            💡 Have a query or want access to the source code? Feel free to DM us on Instagram!
+          </p>
+        </div>
+
         {/* 📱 Contact Info */}
         <div className="flex items-center justify-center gap-2 pt-4">
           <Instagram className="text-pink-400" />
           <a
-            href="https://instagram.com/your_instagram_id"
+            href="https://www.instagram.com/jiit_connects?igsh=eGJuZXVsenB0cmw3"
             target="_blank"
             rel="noopener noreferrer"
             className="text-pink-300 hover:underline"
           >
-         https://www.instagram.com/jiit_connects?igsh=eGJuZXVsenB0cmw3
+            @jiit_connects
           </a>
         </div>
 

@@ -23,7 +23,7 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
           <Link to="/" className="w-full sm:w-auto text-center border border-gray-500 py-2 px-6 rounded-full text-sm sm:text-base font-medium text-white hover:bg-white hover:text-black transition">
-            Documentation <i className="bx bx-link-external"></i>
+            For source code , go to aboutUs section <i className="bx bx-link-external"></i>
           </Link>
           <Link to="/home-page" className="w-full sm:w-auto text-center py-2 px-8 rounded-full text-sm sm:text-base font-medium bg-white text-black hover:bg-gray-300 transition">
             Get Started

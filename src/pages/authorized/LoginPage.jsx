@@ -22,7 +22,7 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://collegedating-6.onrender.com/api/v1/auth/login", {
+      const response = await axios.post("https://collegedating-1.onrender.com/api/v1/auth/login", {
         email,
         password,
       });
@@ -30,6 +30,8 @@ export default function LoginPage() {
       if (response.status === 200) {
         const token = response.data.token;
         const UserID = response.data.user.id
+        console.log(token);
+        
         localStorage.setItem("token", token);
         localStorage.setItem("UserID", UserID);
         console.log(UserID);

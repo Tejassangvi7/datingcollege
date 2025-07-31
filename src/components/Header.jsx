@@ -23,13 +23,13 @@ const Header = () => {
       </h1>
 
       <nav className="hidden md:flex items-center gap-8 lg:gap-10">
-        <Link to="/upcomping-events" className="text-sm lg:text-base tracking-wider hover:text-gray-400 transition">
+        <Link to="/UpcomingUpdates" className="text-sm lg:text-base tracking-wider hover:text-gray-400 transition">
           UPCOMING UPDATES
         </Link>
         <Link to="/features" className="text-sm lg:text-base tracking-wider hover:text-gray-400 transition">
           FEATURES
         </Link>
-        <Link to="/privacy-security" className="text-sm lg:text-base tracking-wider hover:text-gray-400 transition">
+        <Link to="/privacy" className="text-sm lg:text-base tracking-wider hover:text-gray-400 transition">
           PRIVACY & SECURITY
         </Link>
         <Link to="/about-us" className="text-sm lg:text-base tracking-wider hover:text-gray-400 transition">

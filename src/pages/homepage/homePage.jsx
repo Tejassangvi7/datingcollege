@@ -123,13 +123,15 @@ function Homepage() {
   useEffect(() => {
     const checkAuth = async () => {
       const token = localStorage.getItem('token');
+      console.log(token);
+      
       if (!token) {
         toast.error("You are not logged in. Please login first.", { theme: "dark" });
         setTimeout(() => navigate('/login'), 3000);
         return;
       }
       try {
-        const response = await api.post("/api/v1/auth/check");
+        const response = await api.post("api/v1/auth/check");
         if (response.status !== 200) throw new Error();
         setLoading(false);
       } catch {

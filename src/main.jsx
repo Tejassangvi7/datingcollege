@@ -9,12 +9,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import LandingPage from "./pages/landingPage.jsx"
 import HomePage from "./pages/homepage/homePage.jsx"
 import LoginPage from "./pages/authorized/LoginPage.jsx"
+import Features from "./pages/features/features.jsx"
+import PrivacySecurity from "./pages/features/privacy.jsx"
 import RegistrationForm from "./pages/authorized/signupPage.jsx"
 import ForgotPasswordPage from "./pages/authorized/passwordReset.jsx"
 import ResetPassword from "./pages/authorized/passwordReset.jsx"
 import ProfilePage from "./pages/profile/profilePageown.jsx"
 import TalkToStrangerPage from "./pages/talktostranger/talktostranger.jsx"
 import ConfessionForm from "./pages/confessions/confessionPage.jsx"
+import UpcomingUpdates from "./pages/features/upcomingUpdates.jsx"
 import Confession from "./components/confession.jsx"
 import ConfessionsFeed from "./components/confessionFeed.jsx"
 import Disconnected from "./components/disconnect.jsx"
@@ -103,6 +106,18 @@ path:'/all-confessions',
   {
     path:'/settings',
     element:<ComingSoonPage/>
+  },
+  {
+    path:'/features',
+    element:<Features/>
+  },
+  {
+    path:'/privacy',
+    element:<PrivacySecurity/>
+  },
+  {
+    path:"/UpcomingUpdates",
+    element:<UpcomingUpdates/>
   }
 ])
 
