@@ -9,7 +9,7 @@ const EnterOTP = ({ email, onNext }) => {
   const handleVerify = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://collegedating-1.onrender.com/api/v1/auth/verify-otp-1st", { email, otp });
+      await axios.post("https://collegedating-cbii.onrender.com/api/v1/auth/verify-otp-1st", { email, otp });
       toast.success("OTP Verified!");
       onNext();
     } catch (err) {
