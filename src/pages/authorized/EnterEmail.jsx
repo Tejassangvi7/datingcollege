@@ -10,7 +10,7 @@ const EnterEmail = ({ onNext }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post( "https://collegedating-1.onrender.com/api/v1/auth/send-otp-1st",
+      await axios.post( "https://collegedating-cbii.onrender.com/api/v1/auth/send-otp-1st",
         { email });
       toast.success("OTP sent to your email!");
       onNext(email);
