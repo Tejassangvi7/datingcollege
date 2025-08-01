@@ -11,7 +11,12 @@ const EnterEmail = ({ onNext }) => {
     e.preventDefault();
     try {
       await axios.post( "https://collegedating-cbii.onrender.com/api/v1/auth/send-otp-1st",
-        { email });
+        { email },
+         {
+          withCredentials: true, // ✅ Important for cookie/session-based systems
+        }
+                       
+                      );
       toast.success("OTP sent to your email!");
       onNext(email);
     } catch (err) {
