@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://collegedating-cbii.onrender.com',
+  baseURL:  'https://datingwebsite-backend-tv10.onrender.com',
   timeout: 10_000,    // 10 seconds
 });
 
