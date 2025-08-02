@@ -11,7 +11,7 @@ const EnterNewPassword = ({ email }) => {
   const handleReset = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://collegedating-cbii.onrender.com/api/v1/auth/updatePassword", {
+      await axios.post("https://datingwebsite-backend-tv10.onrender.com/api/v1/auth/updatePassword", {
         email,
         newPassword,
       });
