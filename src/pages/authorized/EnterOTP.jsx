@@ -9,7 +9,13 @@ const EnterOTP = ({ email, onNext }) => {
   const handleVerify = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://datingwebsite-backend-tv10.onrender.com/api/v1/auth/verify-otp-1st", { email, otp });
+await axios.post(
+  "https://datingwebsite-backend-tv10.onrender.com/api/v1/auth/verify-otp-1st",
+  { email, otp },
+  { withCredentials: true }
+);
+      
+      
       toast.success("OTP Verified!");
       onNext();
     } catch (err) {
