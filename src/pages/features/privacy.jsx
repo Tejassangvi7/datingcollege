@@ -1,4 +1,3 @@
-// PrivacySecurity.jsx
 import React from 'react';
 
 const sections = [
@@ -36,7 +35,7 @@ const sections = [
 
 const PrivacySecurity = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen py-16 px-4">
+    <div className="bg-gray-900 text-white py-16 px-4 min-h-screen overflow-y-auto scroll-smooth max-h-screen">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4">Privacy & Security</h1>
         <p className="text-lg text-gray-400 mb-12">
