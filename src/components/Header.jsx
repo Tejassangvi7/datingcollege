@@ -52,13 +52,13 @@ const Header = () => {
         id="mobileMenu"
         className="hidden fixed top-16 bottom-0 right-0 left-0 bg-[#0f0f0f] bg-opacity-95 backdrop-blur-md p-6 z-40 flex flex-col gap-6 items-center md:hidden"
       >
-        <Link to="/upcomping-events" className="text-lg tracking-wider hover:text-gray-300 transition" onClick={toggleMobileMenu}>
+        <Link to="/UpcomingUpdates" className="text-lg tracking-wider hover:text-gray-300 transition" onClick={toggleMobileMenu}>
           UPCOMING UPDATES
         </Link>
         <Link to="/features" className="text-lg tracking-wider hover:text-gray-300 transition" onClick={toggleMobileMenu}>
           FEATURES
         </Link>
-        <Link to="/privacy-security" className="text-lg tracking-wider hover:text-gray-300 transition" onClick={toggleMobileMenu}>
+        <Link to="/privacy" className="text-lg tracking-wider hover:text-gray-300 transition" onClick={toggleMobileMenu}>
           PRIVACY & SECURITY
         </Link>
         <Link to="/about-us" className="text-lg tracking-wider hover:text-gray-300 transition" onClick={toggleMobileMenu}>
