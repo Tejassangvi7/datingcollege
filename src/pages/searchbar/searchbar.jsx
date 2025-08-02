@@ -143,7 +143,7 @@ export default function SearchPeoplePage() {
                       onClick={() => handleSelectSuggestion(user.name)}
                       className="px-4 py-2 hover:bg-pink-100 cursor-pointer border-b"
                     >
-                      {user.name || "Unknown"} ({user.enrollment || "N/A"})
+                      {user.name || "Unknown"} ({user.email || "N/A"})
                     </li>
                   ))}
                 </ul>
