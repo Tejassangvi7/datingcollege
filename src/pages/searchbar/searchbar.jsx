@@ -170,7 +170,7 @@ export default function SearchPeoplePage() {
                   transition={{ delay: idx * 0.1 }}
                 >
                   <img
-                    src={user.avatar || "/default-avatar.png"}
+                    src={user.profile || "/default-avatar.png"}
                     alt={user.name || "User"}
                     className="w-24 h-24 rounded-full mb-4 object-cover border-4 border-pink-500"
                   />
