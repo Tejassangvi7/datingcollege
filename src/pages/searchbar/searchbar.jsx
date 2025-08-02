@@ -129,7 +129,7 @@ export default function SearchPeoplePage() {
             <div className="relative w-full" ref={wrapperRef}>
               <input
                 type="text"
-                placeholder="Search by name or enrollment..."
+                placeholder="Search by name "
                 value={query}
                 onChange={handleChange}
                 onKeyDown={handleKeyDown}
