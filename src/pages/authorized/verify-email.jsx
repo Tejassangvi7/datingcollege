@@ -59,7 +59,7 @@ const EmailVerification = () => {
 
     try {
       const response = await axios.post(
-        "https://collegedating-1.onrender.com/api/v1/auth/verify-otp-1st",
+        "https://datingwebsite-backend-tv10.onrender.com/api/v1/auth/verify-otp-1st",
         { email, otp }
       );
       if (response.status === 200) {
