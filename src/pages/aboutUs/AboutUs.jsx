@@ -10,7 +10,10 @@ const AboutUs = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl p-8 max-w-2xl w-full text-center space-y-6">
+      <div
+        className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl p-8 max-w-2xl w-full text-center space-y-6 overflow-y-auto"
+        style={{ maxHeight: 'calc(100vh - 100px)' }} // Allowing scroll inside this section if content is long
+      >
         <h1 className="text-4xl font-bold text-pink-400">About JIIT Dating</h1>
 
         <p className="text-lg text-gray-200">
