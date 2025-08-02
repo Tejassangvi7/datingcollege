@@ -22,7 +22,7 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://collegedating-cbii.onrender.com/api/v1/auth/login", {
+      const response = await axios.post("https://datingwebsite-backend-tv10.onrender.com/api/v1/auth/login", {
         email,
         password,
       });
