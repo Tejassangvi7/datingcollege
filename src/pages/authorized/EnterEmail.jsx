@@ -10,7 +10,7 @@ const EnterEmail = ({ onNext }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post( "https://collegedating-cbii.onrender.com/api/v1/auth/send-otp-1st",
+      await axios.post( "https://datingwebsite-backend-tv10.onrender.com/api/v1/auth/send-otp-1st",
         { email },
          {
           withCredentials: true, // ✅ Important for cookie/session-based systems
