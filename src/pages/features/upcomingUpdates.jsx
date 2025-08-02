@@ -1,4 +1,3 @@
-// UpcomingUpdates.jsx
 import React from 'react';
 
 const updates = [
@@ -36,25 +35,28 @@ const updates = [
 
 const UpcomingUpdates = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen py-16 px-4">
+    <div className="bg-gray-900 text-white py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4">Upcoming Updates</h1>
         <p className="text-lg text-gray-400 mb-12">
           We’re constantly improving. Here’s a sneak peek at what’s launching soon on our platform.
         </p>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {updates.map((update, i) => (
-            <div
-              key={i}
-              className="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="text-4xl mb-4">{update.icon}</div>
-              <h2 className="text-xl font-semibold mb-2">{update.title}</h2>
-              <p className="text-gray-400 text-sm mb-3">{update.description}</p>
-              <span className="text-xs text-blue-400">ETA: {update.eta}</span>
-            </div>
-          ))}
+        <div className="overflow-y-auto max-h-[calc(100vh-200px)] scroll-smooth">
+          {/* Added overflow for smooth scrolling and max height for content overflow */}
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {updates.map((update, i) => (
+              <div
+                key={i}
+                className="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="text-4xl mb-4">{update.icon}</div>
+                <h2 className="text-xl font-semibold mb-2">{update.title}</h2>
+                <p className="text-gray-400 text-sm mb-3">{update.description}</p>
+                <span className="text-xs text-blue-400">ETA: {update.eta}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <p className="mt-16 text-sm text-gray-500">
